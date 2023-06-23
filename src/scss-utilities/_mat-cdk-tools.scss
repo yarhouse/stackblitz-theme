@@ -1,0 +1,59 @@
+
+body {
+
+    /*
+     * Ngb-Bootstrap modals have a z-index of 1050, and the cdk-overlay-container is set to 1000.
+     * This allows cdk drop-downs like the one used in mat-paginator to display over a modal window.
+     */
+    .cdk-overlay-container {
+        z-index: 1100;
+    }
+
+    .cdk-drop-list.cdk-drop-list-dragging,
+    .drop-list.cdk-drop-list-dragging {
+        .draggable-row:not(.cdk-drag-placeholder) {
+            transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+        }
+    }
+
+    .cdk-drag-animating {
+        transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+    }
+
+    .cdk-drag-placeholder {
+        opacity: 0.5;
+    }
+
+    // Cursor and mouse interactions
+    [drag-handle],
+    .drag-handle,
+    .draghandle {
+        cursor: -webkit-grab !important;
+        cursor: -moz-grab !important;
+        cursor: -o-grab !important;
+        cursor: grab !important;
+        &:active,
+        &:focus,
+        &:hover {
+            fa-icon {
+                opacity: 1;
+            }
+        }
+        &:active,
+        &:focus {
+            cursor: -webkit-grabbing !important;
+            cursor: -moz-grabbing !important;
+            cursor: -o-grabbing !important;
+            cursor: grabbing !important;
+        }
+        fa-icon {
+            opacity: 0.5;
+            &:active,
+            &:focus,
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+
+}

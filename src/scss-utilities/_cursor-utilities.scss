@@ -1,0 +1,36 @@
+
+body {
+
+    .mat-button.disabled,
+    button:disabled,
+    button mat-menu-item a:disabled,
+    .btn.disabled,
+    .btn:disabled,
+    .cursor-disabled {
+        cursor: not-allowed !important;
+    }
+
+    .unselectable {
+        pointer-events: none !important;
+        cursor: pointer !important;
+    }
+
+    .clickable,
+    .cursor-pointer {
+        cursor: pointer !important;
+    }
+
+    .cursor-default {
+        cursor: default !important;
+    }
+
+    .cursor-preview {
+        cursor: zoom-in !important;
+    }
+
+    .cursor-help,
+    .cursor-info {
+        cursor: help !important;
+    }
+
+}

@@ -1,0 +1,63 @@
+
+body {
+
+    mat-toolbar.allogy-toolbar.mat-toolbar {
+        z-index: 100 !important;
+        width: 100vw !important;
+        height: 50px !important; // scss variable failure catch
+        height: var(--allogy-mat-toolbar-height) !important;
+        -webkit-box-pack: start !important;
+        -ms-flex-pack: start !important;
+        justify-content: flex-start !important;
+        padding: 0 !important;
+
+        .mat-button.branch-link {
+            max-width: 200px;
+            display: flex;
+            span.mat-button-wrapper {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                img {
+                    height: 2.5rem !important;
+                    min-height: 2.5rem;
+                    max-height: 2.5rem;
+                }
+            }
+        }
+    }
+
+    mat-card-header.mat-card-header{
+        display: flex;
+        .mat-card-header-text {
+            margin-left: 0;
+            mat-card-title{
+                display: block;
+                margin-bottom: 0.85rem;
+                + mat-card-subtitle {
+                    display: block;
+                    margin-bottom: 1.25rem;
+                }
+            }
+        }
+    }
+
+    .mat-button-base.font-size-lg {
+        font-size: 1.25rem;
+    }
+
+
+    .mat-button,
+    .mat-flat-button,
+    .mat-stroked-button,
+    .mat-raised-button{
+        &.mat-button-base.text-truncate {
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+    }
+
+
+}

@@ -1,0 +1,180 @@
+
+@import './scss-utilities/cursor-utilities';
+@import './scss-utilities/mat-cdk-tools';
+@import './scss-utilities/mat-form-field';
+@import './scss-utilities/material-overwrites';
+@import './scss-utilities/placeholder_utilities';
+@import './scss-utilities/scrolling-utilities';
+
+:root {
+    --allogy-tenant-50: rgb(229, 239, 232);
+    --allogy-tenant-100: rgb(190, 215, 197);
+    --allogy-tenant-200: rgb(147, 188, 158);
+    --allogy-tenant-300: rgb(104, 161, 119);
+    --allogy-tenant-400: rgb(71, 140, 89);
+    --allogy-tenant-500: rgb(39, 120, 60);  // Capillary default #27783c
+    --allogy-tenant-600: rgb(35, 112, 54);
+    --allogy-tenant-700: rgb(29, 101, 46);
+    --allogy-tenant-800: rgb(23, 91, 39);
+    --allogy-tenant-900: rgb(14, 72, 26);
+    --allogy-tenant-A100: rgb(81, 255, 122);
+    --allogy-tenant-A200: rgb(0, 255, 52);
+    --allogy-tenant-A400: rgb(0, 231, 36);
+    --allogy-tenant-A700: rgb(0, 204, 32);
+
+    --allogy-tenant-50-contrast: rgba(0, 0, 0, 0.87);
+    --allogy-tenant-100-contrast: rgba(0, 0, 0, 0.87);
+    --allogy-tenant-200-contrast: rgba(0, 0, 0, 0.87);
+    --allogy-tenant-300-contrast: rgba(0, 0, 0, 0.87);
+    --allogy-tenant-400-contrast: rgba(0, 0, 0, 0.87);
+    --allogy-tenant-500-contrast: #ffffff;  // WCAG AAA
+    --allogy-tenant-600-contrast: #ffffff;
+    --allogy-tenant-700-contrast: #ffffff;
+    --allogy-tenant-800-contrast: #ffffff;
+    --allogy-tenant-900-contrast: #ffffff;
+    --allogy-tenant-A100-contrast: rgba(0, 0, 0, 0.87);
+    --allogy-tenant-A200-contrast: rgba(0, 0, 0, 0.87);
+    --allogy-tenant-A400-contrast: rgba(0, 0, 0, 0.87);
+    --allogy-tenant-A700-contrast: rgba(0, 0, 0, 0.87);
+
+    --bs-border-radius: 0.25rem;
+    --bs-border-color: #dee2e6;
+
+    --cropper-outline-color: rgba(255, 255, 255, 0.85);
+
+    --allogy-mat-toolbar-height: 50px;
+    --allogy-footer-height: 35px;
+    --allogy-breadcrumb-height: 40px;
+    --allogy-transition-duration: 0.4s;
+    --allogy-transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+
+}
+
+html,
+body {
+    height: 100vh;
+    width: 100vw;
+    font-size: 14px;
+}
+body {
+    margin: 0;
+
+    a:-webkit-any-link:focus-visible,
+    a:-webkit-any-link,
+    :focus-visible {
+        outline-color: var(--primary, blue) !important;
+    }
+
+    @media (max-width: 991px) {
+        .container {
+            max-width: 100% !important;
+        }
+    }
+
+    .mat-tooltip {
+        font-size: 1rem;
+        &.allogy-multiline-tooltip {
+            white-space: pre-wrap;
+        }
+    }
+
+
+    .allogy-alert.alert {
+        border-width: 0 0 0 0.5rem !important;
+        border-radius: 0 !important;
+        color: var(--gray-dark, black) !important;
+        &.alert-danger {
+            border-color: var(--danger);
+        }
+        &.alert-info {
+            border-color: var(--info);
+        }
+        &.alert-warning {
+            border-color: var(--warning);
+        }
+        &.alert-success {
+            border-color: var(--success);
+        }
+        &.alert-primary {
+            border-color: var(--primary);
+        }
+        &.alert-secondary {
+            border-color: var(--secondary);
+        }
+        &.alert-light {
+            border-color: var(--light);
+        }
+        &.alert-dark {
+            border-color: var(--dark);
+        }
+    }
+
+
+    // Sizes
+    .min-h-0 {
+        min-height: 0% !important;
+    }
+    .min-h-100 {
+        min-height: 100% !important;
+    }
+    .max-h-100 {
+        max-height: 100% !important;
+    }
+    .h-inherit {
+        height: inherit;
+    }
+
+    // Spacing
+    .position-absolute {
+        &.bottom-0 {
+            bottom: 0;
+        }
+        &.top-0 {
+            top: 0;
+        }
+        &.left-0 {
+            left: 0;
+        }
+        &.right-0 {
+            right: 0;
+        }
+    }
+
+    // Borders, Backgrounds, and Colors
+    .border {
+        &.border-block {
+            border-style: solid; // do not add important, this helps ensure a border style exists for this utility when used cold
+            border-width: 0 0 0 0.5rem !important;
+        }
+        &.border-dashed {
+            border-style: dashed !important;
+        }
+        &.border-dotted {
+            border-style: dotted !important;
+        }
+        &.border-grove {
+            border-style: groove !important;
+        }
+        &.border-transparent {
+            border-color: transparent !important;
+        }
+    }
+
+
+    /*
+    Creating our own tenant utility classes to match Bootstrap defaults
+    */
+    .bg-tenant{
+        background-color: var(--allogy-tenant-500, #27783c) !important;
+        &.bg-tenant-text{
+            color: var(--allogy-tenant-500-contrast, white);
+        }
+    }
+    .border-tenant{
+        border-color: var(--allogy-tenant-500, #27783c) !important;
+    }
+    .text-tenant{
+        color: var(--allogy-tenant-500, #27783c) !important;
+    }
+
+}

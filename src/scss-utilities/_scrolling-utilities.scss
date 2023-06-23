@@ -1,0 +1,29 @@
+
+body {
+
+    router-outlet + * {
+        flex: 1 1 auto;
+        flex-direction: column;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        position: relative;
+    }
+
+    .allogy-d-flex-fill-column-scroll-auto {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        flex: 1 1 auto; // .flex-fill
+        flex-direction: column; // .flex-column
+        height: 100%;
+        position: relative;
+        overflow-y: auto;
+    }
+
+    .overflow-y-scroll {
+        overflow-y: auto !important;
+    }
+}
