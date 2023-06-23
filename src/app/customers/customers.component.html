@@ -1,0 +1,7 @@
+<h1>Customer List</h1>
+<mat-card *ngFor="let customer of customers" [ngClass]="{customer}">
+  {{ customer.name }}
+  <button mat-mini-fab color="primary" aria-label="customer edit button">
+    <mat-icon aria-label="customer edit  icon"> edit </mat-icon>
+  </button>
+</mat-card>
